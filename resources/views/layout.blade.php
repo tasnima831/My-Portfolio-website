@@ -11,6 +11,14 @@
 
     @include('pages.hero_section')
 
+    @include('pages.about')
+
+    @include('pages.feature')
+
+    @include('pages.product')
+
+    @include('pages.gallary')
+
     @yield('content')
 
     @include('importants.footer')

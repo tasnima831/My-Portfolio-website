@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 body {
@@ -34,8 +35,8 @@ body {
     position: absolute;
     left: -320px;
     display: grid;
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 52px;
     place-items: center;
     border-radius: 50%;
     color: var(--paper);
@@ -47,6 +48,39 @@ body {
     transform: translateX(0);
     transition: opacity 260ms ease, transform 500ms cubic-bezier(.2, .8, .2, 1);
 }
+
+.brand img {
+    display: block;
+    width: 180px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 4px;
+    z-index: 2;
+    left: 170px;
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-content: center;
+    gap: 5px;
+    padding: 0;
+    border: 1px solid rgba(93, 13, 24, .18);
+    border-radius: 50%;
+    color: var(--ink);
+    background: rgba(255, 254, 248, .42);
+    box-shadow: 0 8px 22px rgba(93, 13, 24, .07);
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-8px) scale(.9);
+    transition: background 180ms ease, opacity 220ms ease, transform 300ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.menu-toggle:hover { background: rgba(255, 254, 248, .82); }
+.menu-toggle span { display: block; width: 16px; height: 1.5px; border-radius: 2px; background: currentColor; transition: transform 220ms ease; }
 
 .main-nav {
     display: flex;
@@ -78,26 +112,55 @@ body {
 
 .site-header.is-scrolled {
     left: 24px;
-    width: 148px;
-    transform: translateX(0);
+    width: 238px;
+    height: 52px;
+    transform: none;
 }
 
 .site-header.is-scrolled .brand {
+    top: 4px;
     opacity: 1;
     left: 0;
     transform: translateX(0);
 }
 
 .site-header.is-scrolled .main-nav {
+    position: fixed;
+    top: 32px;
+    left: 50%;
     visibility: hidden;
     opacity: 0;
-    transform: translateY(-18px) scale(.88);
+    transform: translateX(-50%) translateY(-18px) scale(.88);
+}
+
+.site-header.is-scrolled .menu-toggle {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0) scale(1);
+}
+
+.site-header.is-scrolled.is-menu-open .main-nav {
+    position: fixed;
+    z-index: 1;
+    top: 32px;
+    left: 50%;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.site-header.is-menu-open .menu-toggle {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-8px) scale(.9);
 }
 
 .hero, .content-section {
     box-sizing: border-box;
     min-height: 100vh;
     padding: 150px max(8vw, 28px) 72px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .hero {
