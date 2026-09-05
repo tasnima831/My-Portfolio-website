@@ -1,0 +1,36 @@
+/* Keep each homepage section within one laptop viewport at normal zoom.
+   Use compact content rather than clipping or adding nested scrollbars.
+   Narrow screens and enlarged text may expand naturally for readability. */
+@media (min-width: 1000px) {
+    .content-section:not(.content-section--about) {
+        min-height: 100svh;
+        padding: clamp(96px, 14svh, 120px) 6vw clamp(24px, 4svh, 40px);
+    }
+
+
+    .content-section.content-section--education,
+    .content-section.content-section--skills {
+        padding-block: clamp(64px, 9svh, 80px);
+    }
+
+    .skills-groups { margin-top: 20px; }
+    .skills-group {
+        grid-template-columns: minmax(140px, .7fr) minmax(0, 3fr);
+        gap: 24px;
+        padding-block: clamp(10px, 1.6svh, 16px);
+        align-items: center;
+    }
+    .skills-group__header { padding-top: 0; }
+    .skills-group h3 { font-size: 1.4rem; }
+    .skills-section-inner .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(76px, 1fr));
+        gap: 10px;
+    }
+    .skills-section-inner .skill-card {
+        min-height: 72px;
+        padding: 10px 6px;
+        gap: 7px;
+    }
+    .skills-section-inner .skill-card__name { font-size: .7rem; }
+
+}
