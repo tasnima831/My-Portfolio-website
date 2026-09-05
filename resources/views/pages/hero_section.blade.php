@@ -6,7 +6,7 @@
             {{-- <a class="hero-link" href="#about">Explore my work <span aria-hidden="true">&darr;</span></a> --}}
         </div>
 
-        <figure class="" aria-label="Portrait of Tasnima Akther Tisha">
+        <figure class="hero-portrait" aria-label="Portrait of Tasnima Akther Tisha">
             <img src="{{ asset('images/me.png') }}" alt="Portrait of Tasnima Akther Tisha">
         </figure>
     </section>
