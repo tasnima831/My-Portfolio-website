@@ -10,8 +10,7 @@
     <nav class="main-nav" id="primary-navigation" aria-label="Primary navigation">
         <a class="nav-link is-active" href="#home">Home</a>
         <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#features">Features</a>
-        <a class="nav-link" href="#product">Product</a>
-        <a class="nav-link" href="#gallery">Gallery</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
     </nav>
 </header>

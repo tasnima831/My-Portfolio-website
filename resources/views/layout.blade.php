@@ -20,11 +20,9 @@
 
     @include('pages.education')
 
-    @include('pages.feature')
+    @include('pages.projects')
 
-    @include('pages.product')
-
-    @include('pages.gallary')
+    @include('pages.contact')
 
     @yield('content')
 

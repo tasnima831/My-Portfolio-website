@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460" viewBox="0 0 800 460">
+<defs><linearGradient id="bg"><stop stop-color="#a77d79"/><stop offset="1" stop-color="#390b13"/></linearGradient></defs>
+<rect width="800" height="460" fill="url(#bg)"/>
+<rect x="58" y="45" width="625" height="353" rx="12" fill="#fffced"/>
+<path d="M70 45h601q12 0 12 12v25H58V57q0-12 12-12" fill="#e4dbc5"/>
+<g fill="#8a6568"><circle cx="77" cy="64" r="4"/><circle cx="91" cy="64" r="4"/><circle cx="105" cy="64" r="4"/></g>
+<rect x="153" y="56" width="395" height="16" rx="8" fill="#fffced"/>
+<g font-family="Arial" fill="#5d0d18"><text x="87" y="115" font-size="18" font-weight="bold">STUDIO / TISHA</text><text x="465" y="114" font-size="10">WORK     ABOUT     CONTACT</text><text x="88" y="182" font-family="Georgia" font-size="35">Thoughtful design.</text><text x="88" y="222" font-family="Georgia" font-size="35">Beautiful websites.</text><text x="89" y="256" font-size="12">A sample portfolio for a creative developer.</text></g>
+<rect x="88" y="278" width="128" height="31" rx="15" fill="#5d0d18"/><text x="109" y="298" font-family="Arial" font-size="11" fill="#fffced">Explore my work →</text>
+<rect x="440" y="145" width="190" height="205" rx="85" fill="#dce2d3"/><circle cx="536" cy="218" r="45" fill="#b88e87"/><path d="M465 344q0-95 71-95t71 95" fill="#5d0d18"/>
+<rect x="89" y="347" width="292" height="1" fill="#d2bcb4"/><text x="89" y="373" font-family="Arial" font-size="11" fill="#76454b">DESIGN  /  DEVELOPMENT  /  INTERACTION</text>
+<rect x="623" y="173" width="122" height="246" rx="17" fill="#e4dbc5" stroke="#fffced" stroke-width="3"/><rect x="631" y="193" width="106" height="211" rx="6" fill="#fffced"/>
+<rect x="659" y="180" width="50" height="5" rx="3" fill="#76454b"/><text x="641" y="219" font-family="Arial" font-size="8" fill="#5d0d18">STUDIO / TISHA</text><text x="641" y="247" font-family="Georgia" font-size="13" fill="#5d0d18">Beautiful</text><text x="641" y="264" font-family="Georgia" font-size="13" fill="#5d0d18">websites.</text><rect x="642" y="281" width="84" height="84" rx="40" fill="#dce2d3"/><circle cx="684" cy="310" r="18" fill="#b88e87"/><path d="M655 358q0-37 29-37t29 37" fill="#5d0d18"/>
+<text x="60" y="439" font-family="Arial" font-size="10" letter-spacing="2" fill="#fffced">SAMPLE DESIGN · DESKTOP + MOBILE</text>
+</svg>

@@ -2,6 +2,11 @@
    Use compact content rather than clipping or adding nested scrollbars.
    Narrow screens and enlarged text may expand naturally for readability. */
 @media (min-width: 1000px) {
+    .content-section--about {
+        padding-top: 110px;
+        padding-bottom: 112px;
+    }
+
     .content-section:not(.content-section--about) {
         min-height: 100svh;
         padding: clamp(96px, 14svh, 120px) 6vw clamp(24px, 4svh, 40px);

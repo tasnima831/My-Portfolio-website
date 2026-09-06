@@ -1,6 +1,14 @@
 <?php
 
 return [
+    'contact_email' => env('PORTFOLIO_CONTACT_EMAIL'),
+    // Add actual project details here. Images are paths relative to public/.
+    'projects' => [
+        ['title' => 'Studio Portfolio', 'description' => 'Sample project: a responsive developer portfolio with animated projects and a clean mobile layout.', 'tags' => ['HTML', 'CSS', 'JavaScript', 'Laravel', 'Vite'], 'image' => 'images/sample-project.svg', 'details_url' => '/images/sample-project.svg', 'demo_url' => null, 'source_url' => null],
+        ['title' => 'Project 02', 'description' => 'Share what you built and your contribution.', 'tags' => [], 'image' => null, 'demo_url' => null, 'source_url' => null],
+        ['title' => 'Project 03', 'description' => 'Highlight the idea and its most useful feature.', 'tags' => [], 'image' => null, 'demo_url' => null, 'source_url' => null],
+        ['title' => 'Project 04', 'description' => 'Tell the story behind another piece of your work.', 'tags' => [], 'image' => null, 'demo_url' => null, 'source_url' => null],
+    ],
     // Set these to your actual numbers to show experience and project cards.
     'coding_since' => 2024, // Calendar-year estimate based on 2 years of coding in 2026.
     'completed_projects' => 4,
@@ -48,3 +56,4 @@ return [
         ['name' => 'Vercel', 'icon' => 'https://cdn.simpleicons.org/vercel', 'group' => 'tool'],
     ],
 ];
+
