@@ -1,3 +1,4 @@
+import './preloader';
 import './bootstrap';
 import './services';
 

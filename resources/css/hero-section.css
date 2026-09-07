@@ -36,10 +36,10 @@ body {
     position: absolute;
     left: -320px;
     display: grid;
-    width: 180px;
-    height: 52px;
+    width: 96px;
+    height: 96px;
     place-items: center;
-    border-radius: 50%;
+    overflow: hidden;
     color: var(--paper);
     background: none;
     font-size: 1.05rem;
@@ -52,9 +52,11 @@ body {
 
 .brand img {
     display: block;
-    width: 180px;
-    height: 52px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.04);
+    filter: brightness(0) drop-shadow(.4px 0 0 #000) drop-shadow(-.4px 0 0 #000);
 }
 
 .menu-toggle {
@@ -113,13 +115,16 @@ body {
 
 .site-header.is-scrolled {
     left: 24px;
-    width: 238px;
+    width: 214px;
     height: 52px;
+    justify-content: flex-end;
+    gap: 12px;
     transform: none;
 }
 
 .site-header.is-scrolled .brand {
-    top: 4px;
+    position: relative;
+    flex-shrink: 0;
     opacity: 1;
     left: 0;
     transform: translateX(0);
@@ -135,6 +140,10 @@ body {
 }
 
 .site-header.is-scrolled .menu-toggle {
+    position: relative;
+    top: auto;
+    left: auto;
+    flex-shrink: 0;
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0) scale(1);

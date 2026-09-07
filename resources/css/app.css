@@ -6,6 +6,8 @@
 @import './projects-section.css';
 @import './project-detail.css';
 @import './contact-section.css';
+@import './footer.css';
+@import './preloader.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';

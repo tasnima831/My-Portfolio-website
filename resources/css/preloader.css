@@ -1,0 +1,31 @@
+.preloader {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: var(--ink);
+    color: var(--paper);
+    transition: transform 850ms cubic-bezier(.76, 0, .24, 1);
+}
+
+html.is-loading { overflow: hidden; }
+.is-loading .preloader { display: grid; place-items: center; }
+.is-loading body > :not(.preloader) { visibility: hidden; }
+.is-loading:has(.preloader.is-leaving) body > :not(.preloader) { visibility: visible; }
+.preloader.is-leaving { transform: translateY(-100%); }
+.preloader-art { width: 100%; }
+.preloader-name { display: block; width: 100%; overflow: visible; }
+.preloader-name path {
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+.preloader-count { position: absolute; right: clamp(24px, 5vw, 80px); bottom: clamp(28px, 6vh, 64px); font-size: clamp(1.5rem, 4vw, 3rem); font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+    .preloader { transition: none; }
+}
+

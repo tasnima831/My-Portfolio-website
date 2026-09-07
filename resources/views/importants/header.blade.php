@@ -1,6 +1,6 @@
 <header class="site-header" data-site-header>
     <a class="brand" href="{{ url('/') }}" aria-label="Tisha home">
-        <img src="{{ asset('images/logo.png') }}" alt="Tisha Logo">
+        <img src="{{ asset('images/sign.png') }}" alt="Tisha Logo">
     </a>
 
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false">
