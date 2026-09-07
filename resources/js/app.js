@@ -1,4 +1,9 @@
-﻿import './bootstrap';
+import './bootstrap';
+import './services';
+
+import './project-modal';
+import './project-gallery';
+import './project-lightbox';
 
 // Keep server-rendered totals available without JavaScript or animation support.
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -78,9 +83,9 @@ document.querySelectorAll('[data-project-archive]').forEach((archive) => {
             card.style.setProperty('--depth', Math.abs(offset));
             card.style.zIndex = cards.length - Math.abs(offset);
             card.classList.toggle('is-selected', offset === 0);
-            card.querySelectorAll('a').forEach((link) => { link.tabIndex = offset === 0 ? 0 : -1; });
-            const select = card.querySelector('[data-select-project]');
-            select.hidden = offset === 0;
+
+
+
         });
         status.textContent = `${index + 1} / ${cards.length}`;
     };
@@ -120,14 +125,6 @@ document.querySelectorAll('[data-project-archive]').forEach((archive) => {
         index = (index + direction + cards.length) % cards.length;
         arrange();
     };
-    cards.forEach((card, position) => {
-        card.querySelector('[data-select-project]').addEventListener('click', () => {
-            if (busy) return;
-            index = position;
-            arrange();
-            next.focus({ preventScroll: true });
-        });
-    });
     prev.disabled = next.disabled = cards.length < 2;
     prev.addEventListener('click', () => show(-1));
     next.addEventListener('click', () => show(1));
@@ -152,3 +149,5 @@ document.querySelectorAll('[data-project-archive]').forEach((archive) => {
 
 
 import './contact-select';
+
+

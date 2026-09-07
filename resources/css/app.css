@@ -1,8 +1,10 @@
 @import 'tailwindcss';
 @import './hero-section.css';
 @import './education-section.css';
+@import './services-section.css';
 @import './laptop-layout.css';
 @import './projects-section.css';
+@import './project-detail.css';
 @import './contact-section.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';

@@ -3,22 +3,41 @@
 return [
     'contact_email' => env('PORTFOLIO_CONTACT_EMAIL'),
     'contact_phone' => env('PORTFOLIO_CONTACT_PHONE'),
-    // Add actual project details here. Images are paths relative to public/.
+    // Each unique slug powers both its card and /projects/{slug} page. Images are relative to public/.
+    // Optional details: overview, role, timeline, features (list), challenge, future_improvements, solution, outcome,
+    // gallery (list of image/alt/caption arrays), demo_url, and source_url.
     'projects' => [
-        ['title' => 'Studio Portfolio', 'description' => 'Sample project: a responsive developer portfolio with animated projects and a clean mobile layout.', 'tags' => ['HTML', 'CSS', 'JavaScript', 'Laravel', 'Vite'], 'image' => 'images/sample-project.svg', 'details_url' => '/images/sample-project.svg', 'demo_url' => null, 'source_url' => null],
-        ['title' => 'Project 02', 'description' => 'Share what you built and your contribution.', 'tags' => [], 'image' => null, 'demo_url' => null, 'source_url' => null],
-        ['title' => 'Project 03', 'description' => 'Highlight the idea and its most useful feature.', 'tags' => [], 'image' => null, 'demo_url' => null, 'source_url' => null],
-        ['title' => 'Project 04', 'description' => 'Tell the story behind another piece of your work.', 'tags' => [], 'image' => null, 'demo_url' => null, 'source_url' => null],
+        ['slug' => 'studio-portfolio', 'challenge' => ['Keeping animated project cards easy to navigate.', 'Balancing large previews with readable project details.', 'Adapting the layout to smaller screens.'], 'future_improvements' => ['Add real project screenshots.', 'Publish live demos and source links.', 'Expand each project with a complete case study.'], 'gallery' => [['image' => 'images/sample-project-desktop.svg', 'alt' => 'Close-up of the sample desktop design', 'caption' => 'Desktop design / A closer look']], 'overview' => 'A sample developer portfolio that brings selected work, skills, education, and contact information together in one responsive website.', 'features' => ['Animated project folder with carousel navigation.', 'Responsive layouts for desktop and mobile.', 'Dedicated sections for skills, education, and project inquiries.'], 'title' => 'Studio Portfolio', 'description' => 'Sample project: a responsive developer portfolio with animated projects and a clean mobile layout.', 'tags' => ['HTML', 'CSS', 'JavaScript', 'Laravel', 'Vite'], 'image' => 'images/sample-project.svg', 'demo_url' => null, 'source_url' => null],
+        ['slug' => 'project-02', 'title' => 'Project 02', 'description' => 'Share what you built and your contribution.', 'tags' => [], 'image' => null, 'demo_url' => null, 'source_url' => null],
+        ['slug' => 'project-03', 'title' => 'Project 03', 'description' => 'Highlight the idea and its most useful feature.', 'tags' => [], 'image' => null, 'demo_url' => null, 'source_url' => null],
+        ['slug' => 'project-04', 'title' => 'Project 04', 'description' => 'Tell the story behind another piece of your work.', 'tags' => [], 'image' => null, 'demo_url' => null, 'source_url' => null],
     ],
     // Set these to your actual numbers to show experience and project cards.
     'coding_since' => 2024, // Calendar-year estimate based on 2 years of coding in 2026.
     'completed_projects' => 4,
     // Replace these placeholders with your education details; add an entry for each qualification.
+    'services' => [
+        ['title' => 'Website Development', 'description' => 'A thoughtful website for your business, personal brand, or next idea. Built with clean code and layouts that feel natural on every screen.', 'details' => 'Responsive layouts / Portfolio websites / Business websites'],
+        ['title' => 'Laravel Applications', 'description' => 'Turn your idea into a practical web application with Laravel, from the interface to the back-end features that keep it running.', 'details' => 'Custom features / Database integration / Back-end development'],
+        ['title' => 'Website Redesign', 'description' => 'Give your existing website a clearer structure and a fresh visual direction, with attention to readability and ease of use.', 'details' => 'Visual refresh / Mobile layouts / Navigation improvements'],
+        ['title' => 'Front-End Development', 'description' => 'Bring your design to life with responsive interfaces, thoughtful interactions, and polished details using HTML, CSS, and JavaScript.', 'details' => 'Design to code / Interactive elements / Responsive interfaces'],
+    ],
+    'experience' => [
+        [
+            'title' => 'Laravel Course',
+            'organization' => 'IT Lab',
+            'year' => '2026',
+            'timeline_period' => '2022 - 2026',
+            'duration' => '5 months',
+            'description' => 'Five months of learning Laravel through a course at IT Lab.',
+        ],
+    ],
     'education' => [
         [
             'qualification' => 'B.Sc in Software Engineering',
             'institution' => 'Metropolitan University',
-            'years' => '2022 - Present',
+            'years' => '2022 - 2026',
+            'expected_finish' => '2026',
             'field' => 'Software Engineering',
             'cgpa' => '3.70',
             'description' => '', // Optional: subject, result, or academic highlights.
@@ -57,4 +76,7 @@ return [
         ['name' => 'Vercel', 'icon' => 'https://cdn.simpleicons.org/vercel', 'group' => 'tool'],
     ],
 ];
+
+
+
 
