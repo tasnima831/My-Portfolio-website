@@ -11,6 +11,6 @@
         <a class="nav-link is-active" href="#home">Home</a>
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link" href="#contact">Hire Me</a>
     </nav>
 </header>

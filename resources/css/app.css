@@ -3,6 +3,7 @@
 @import './education-section.css';
 @import './laptop-layout.css';
 @import './projects-section.css';
+@import './contact-section.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';

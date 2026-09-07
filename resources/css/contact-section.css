@@ -1,0 +1,41 @@
+.content-section.contact-section { background: #f3efe5; padding-block: 110px 70px; }
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(36px, 7vw, 110px); width: min(100%, 1060px); margin-inline: auto; }
+.contact-copy .eyebrow { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 20px; }
+.contact-copy h2 { margin: 0 0 24px; font-weight: 500; font-size: clamp(2.8rem, 4.5vw, 4.4rem); }
+.contact-copy h2 em { font-family: var(--font-display); font-weight: 400; }
+.contact-intro { max-width: 370px; color: #716467; font-size: .95rem; line-height: 1.8; }
+.contact-details { display: grid; gap: 22px; margin-top: 35px; }
+.contact-detail { display: flex; align-items: center; gap: 16px; width: fit-content; max-width: 100%; text-decoration: none; color: #716467; font-size: clamp(.9rem, 1.4vw, 1.05rem); line-height: 1.5; overflow-wrap: anywhere; }
+.contact-detail > span { min-width: 0; }
+.contact-detail:hover { color: var(--ink); }
+.contact-icon { width: 22px; height: 22px; flex: 0 0 22px; }
+.contact-form { min-width: 0; padding: clamp(24px, 3vw, 40px); border: 1px solid #e8e1da; border-radius: 26px; background: #fffefa; box-shadow: 0 12px 40px #5d0d1806; }
+.contact-field { display: grid; gap: 8px; margin-bottom: 18px; }
+.contact-field label { font-size: .8rem; font-weight: 500; }
+.contact-field input, .contact-field select, .contact-field textarea { box-sizing: border-box; width: 100%; min-width: 0; border: 1px solid transparent; border-radius: 8px; padding: 12px 13px; background: #f3f1ed; color: var(--ink); font: inherit; font-size: .85rem; }
+.contact-field textarea { resize: vertical; min-height: 115px; }
+.contact-field input::placeholder, .contact-field textarea::placeholder { color: #847b7c; }
+.contact-field :focus-visible, .contact-submit:focus-visible, .contact-detail:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.contact-submit { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border: 0; border-radius: 40px; background: var(--ink); color: var(--paper); padding: 14px 28px; font: inherit; font-size: .85rem; cursor: pointer; }
+.contact-submit:hover { background: var(--wine-dark); }
+.contact-notice { padding: 12px; margin: 0 0 20px; border-radius: 8px; background: #e7efdf; color: #304b24; font-size: .85rem; }
+.contact-notice--error { background: #fae7e5; color: #721b22; }
+.contact-notice p { margin: 4px 0; }
+@media (max-width: 700px) {
+    .contact-layout { grid-template-columns: 1fr; gap: 32px; }
+    .content-section.contact-section { padding-block: 100px 48px; }
+    .contact-copy h2 { font-size: 2.8rem; }
+}
+
+.project-select { position: relative; min-width: 0; }
+.project-select__trigger { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; padding: 12px 13px; border: 1px solid transparent; border-radius: 8px; background: #f3f1ed; color: var(--ink); text-align: left; font: inherit; font-size: .85rem; cursor: pointer; }
+.project-select__trigger::after { content: ''; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); margin: -4px 3px 0 0; flex-shrink: 0; }
+.project-select__trigger[aria-expanded="true"] { border-color: var(--ink); }
+.project-select__trigger[aria-expanded="true"]::after { transform: rotate(225deg); margin-top: 4px; }
+.project-select__trigger.is-placeholder { color: #847b7c; }
+.project-select__options { position: absolute; z-index: 5; top: calc(100% + 8px); left: 0; right: 0; padding: 6px; border: 1px solid #dfd1c9; border-radius: 12px; background: #fffefa; box-shadow: 0 12px 28px #5d0d181a; max-height: 240px; overflow-y: auto; }
+.project-select__options[hidden] { display: none; }
+.project-select__option { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 42px; padding: 10px 12px; border-radius: 7px; color: var(--ink); font-size: .85rem; cursor: pointer; }
+.project-select__option.is-active, .project-select__option:hover { background: #f0e5df; }
+.project-select__option[aria-selected="true"] { background: var(--ink); color: var(--paper); }
+.project-select__option[aria-selected="true"]::after { content: '\2713'; }

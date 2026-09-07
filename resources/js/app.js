@@ -150,3 +150,5 @@ document.querySelectorAll('[data-project-archive]').forEach((archive) => {
     }, { passive: true });
 });
 
+
+import './contact-select';

@@ -2,6 +2,7 @@
 
 return [
     'contact_email' => env('PORTFOLIO_CONTACT_EMAIL'),
+    'contact_phone' => env('PORTFOLIO_CONTACT_PHONE'),
     // Add actual project details here. Images are paths relative to public/.
     'projects' => [
         ['title' => 'Studio Portfolio', 'description' => 'Sample project: a responsive developer portfolio with animated projects and a clean mobile layout.', 'tags' => ['HTML', 'CSS', 'JavaScript', 'Laravel', 'Vite'], 'image' => 'images/sample-project.svg', 'details_url' => '/images/sample-project.svg', 'demo_url' => null, 'source_url' => null],
