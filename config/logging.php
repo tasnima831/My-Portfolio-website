@@ -101,7 +101,13 @@ return [
             'handler_with' => [
                 'stream' => 'php://stderr',
             ],
-            'formatter' => env('LOG_STDERR_FORMATTER'),
+            // Keep the exception message and location without a large stack trace
+            // that can obscure the beginning of serverless runtime logs.
+            'formatter' => env('LOG_STDERR_FORMATTER', \Monolog\Formatter\LineFormatter::class),
+            'formatter_with' => [
+                'allowInlineLineBreaks' => false,
+                'includeStacktraces' => false,
+            ],
             'processors' => [PsrLogMessageProcessor::class],
         ],
 
