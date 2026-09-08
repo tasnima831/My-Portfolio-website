@@ -9,16 +9,20 @@ import './project-lightbox';
 
 const header = document.querySelector('[data-site-header]');
 const menuToggle = document.querySelector('.menu-toggle');
+const compactNavigation = window.matchMedia('(max-width: 1100px)');
+const closeNavigation = () => {
+    header?.classList.remove('is-menu-open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', 'Open navigation');
+};
 
 if (header) {
     const updateHeader = () => {
         const isScrolled = window.scrollY > 80;
         header.classList.toggle('is-scrolled', isScrolled);
 
-        if (!isScrolled || header.classList.contains('is-menu-open')) {
-            header.classList.remove('is-menu-open');
-            menuToggle?.setAttribute('aria-expanded', 'false');
-            menuToggle?.setAttribute('aria-label', 'Open navigation');
+        if (!compactNavigation.matches) {
+            closeNavigation();
         }
     };
 
@@ -33,12 +37,19 @@ menuToggle?.addEventListener('click', () => {
 });
 
 document.querySelectorAll('.main-nav a').forEach((link) => {
-    link.addEventListener('click', () => {
-        header?.classList.remove('is-menu-open');
-        menuToggle?.setAttribute('aria-expanded', 'false');
-        menuToggle?.setAttribute('aria-label', 'Open navigation');
-    });
+    link.addEventListener('click', closeNavigation);
 });
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && header?.classList.contains('is-menu-open')) {
+        closeNavigation();
+        menuToggle?.focus();
+    }
+});
+document.addEventListener('click', (event) => {
+    if (header && !header.contains(event.target)) closeNavigation();
+});
+compactNavigation.addEventListener('change', closeNavigation);
 
 // Folder and project navigation use cancellable browser animations.
 document.querySelectorAll('[data-project-archive]').forEach((archive) => {
