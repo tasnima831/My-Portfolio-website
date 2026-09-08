@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="more-about-page">
 <head>
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon-white.png') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>More About Me | Tasnima Akther Tisha</title>
@@ -15,19 +16,21 @@
         <header class="more-about__intro">
             <p class="eyebrow">Beyond the code</p>
             <h1>More about me</h1>
-            <p>I'm Tasnima Akther Tisha. Building websites is one part of what I do; debating is another way I explore ideas and connect with different perspectives.</p>
-            <p>Outside development, I enjoy the exchange of ideas that a debate creates. There is room to speak, but also room to listen, question an assumption, and look at a familiar topic from another angle.</p>
-            <p class="more-about__emphasis">A little more about the person behind the portfolio.</p>
+            <p>I’m Tasnima Akther Tisha, a <strong>full-stack developer</strong> who builds practical and user-friendly web experiences.</p>
+            <p>I also create educational <strong>YouTube content</strong>, where I share knowledge and promote my web projects. Beyond technology, <strong>debating</strong> helps me explore ideas and understand different perspectives.</p>
         </header>
+        <section class="more-about__section" aria-labelledby="youtube-heading">
+            <h2 id="youtube-heading">YouTube &amp; Content Creation</h2>
+            <p>I use YouTube to market the websites and projects I build. I also create educational videos about programming languages, web development, and other technology-related topics to share my knowledge with others.</p>
+            <a class="more-about__youtube-link" href="https://www.youtube.com/@tat7057" target="_blank" rel="noopener noreferrer">Visit my YouTube channel <span aria-hidden="true">&rarr;</span></a>
+        </section>
+        <section class="more-about__section" aria-labelledby="research-heading">
+            <h2 id="research-heading">Research &amp; Thesis</h2>
+            <p>I am currently working on my thesis, which focuses on classifying chest X-ray images using deep learning and transfer learning. Through this ongoing research, I am gaining experience in data preparation, model training, evaluation, and technical documentation.</p>
+        </section>
         <section class="more-about__section" aria-labelledby="debating-heading">
             <h2 id="debating-heading">Debating</h2>
-            <p>Debating gives me a space to put thoughts into words. I enjoy exploring a point of view, thinking through the reasons behind it, and finding a clear way to communicate it.</p>
-            <p>The conversation matters as much as the argument. Hearing another perspective makes room for questions I might not have considered on my own.</p>
-        </section>
-        <section class="more-about__section" aria-labelledby="perspectives-heading">
-            <h2 id="perspectives-heading">Listening &amp; Perspectives</h2>
-            <p>What I value about debating is the balance between expressing an idea and giving someone else's idea careful attention. Clear communication starts with understanding what is being said, not just planning what to say next.</p>
-            <p>That interest in thoughtful discussion is part of who I am beyond my technical work. This space shares that side of my story alongside the projects in my portfolio.</p>
+            <p>Debating helps me express ideas clearly and understand topics from different perspectives.</p>
         </section>
         <a class="more-about__back" href="{{ url('/') }}#about"><span aria-hidden="true">&larr;</span> Back to Portfolio</a>
     </main>

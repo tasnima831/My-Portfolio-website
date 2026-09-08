@@ -19,7 +19,6 @@
                     @foreach ($slides as $slide)
                         <figure class="project-gallery__slide @if ($loop->first) is-active @endif" data-gallery-slide aria-hidden="{{ $loop->first ? 'false' : 'true' }}" aria-label="{{ $loop->iteration }} of {{ $slides->count() }}">
                             <button class="project-gallery__expand" type="button" data-gallery-expand aria-label="Enlarge {{ $slide['alt'] ?? $project['title'].' screenshot' }}" tabindex="{{ $loop->first ? '0' : '-1' }}"><img src="{{ asset($slide['image']) }}" alt="{{ $slide['alt'] ?? $project['title'].' screenshot' }}" width="800" height="460"></button>
-                            @if (!empty($slide['caption']))<figcaption>{{ $slide['caption'] }}</figcaption>@endif
                         </figure>
                     @endforeach
                 </div>

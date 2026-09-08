@@ -1,7 +1,10 @@
 @php
-    $stack = collect(config('portfolio.skills', []));
-    $frontend = $stack->where('group', 'frontend');
-    $frameworks = $stack->where('group', 'framework');
+    $liveWebsiteCount = config('portfolio.live_websites');
+    if ($liveWebsiteCount === null) {
+        $liveWebsiteCount = collect(config('portfolio.projects', []))
+            ->filter(fn ($project) => filled($project['demo_url'] ?? null))
+            ->count();
+    }
     $codingSince = config('portfolio.coding_since');
     $projectCount = config('portfolio.completed_projects');
     $stats = [
@@ -11,8 +14,8 @@
         $projectCount !== null
             ? ['value' => (int) $projectCount, 'label' => 'projects completed', 'detail' => 'Ideas brought to life']
             : ['value' => 'Laravel', 'label' => 'at the core', 'detail' => 'My back-end framework'],
-        ['value' => $frontend->count(), 'label' => 'frontend tools', 'detail' => $frontend->pluck('name')->join(', ')],
-        ['value' => $frameworks->count(), 'label' => 'frameworks', 'detail' => $frameworks->pluck('name')->join(' & ')],
+        ['value' => (int) $liveWebsiteCount, 'label' => 'live websites', 'detail' => 'Built and deployed for the web'],
+        ['value' => 1, 'label' => 'framework', 'detail' => 'Laravel'],
     ];
 @endphp
 <ul class="about-stats" aria-label="My development at a glance">

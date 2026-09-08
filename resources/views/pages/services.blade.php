@@ -2,7 +2,7 @@
     <div class="services-inner">
         <header class="services-heading">
             <p class="eyebrow">Services / How I can help</p>
-            <h2 id="services-heading">Your ideas.<br><em>Thoughtfully built.</em></h2>
+            <h2 id="services-heading">Websites built around your needs.</h2>
         </header>
         <div class="services-folders">
             @foreach (config('portfolio.services', []) as $service)

@@ -30,7 +30,7 @@
                             <a class="project-details-link" data-project-open="{{ $project['slug'] }}" href="{{ route('projects.show', $project['slug']) }}">View Details <span aria-hidden="true">&#8594;</span><span class="sr-only"> for {{ $project['title'] }}</span></a>
                             @if (!empty($project['demo_url']) || !empty($project['source_url']))<div class="project-links">
                                 @if (!empty($project['demo_url']))<a href="{{ $project['demo_url'] }}" target="_blank" rel="noopener noreferrer">Live demo &#8599;<span class="sr-only"> (opens in a new tab)</span></a>@endif
-                                @if (!empty($project['source_url']))<a href="{{ $project['source_url'] }}" target="_blank" rel="noopener noreferrer">Source code &#8599;<span class="sr-only"> (opens in a new tab)</span></a>@endif
+                                @if (!empty($project['source_url']))<a href="{{ $project['source_url'] }}" target="_blank" rel="noopener noreferrer">Source code <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg><span class="sr-only"> (opens in a new tab)</span></a>@endif
                             </div>@endif
                         </div>
                     </article>

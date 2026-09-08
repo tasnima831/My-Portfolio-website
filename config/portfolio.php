@@ -7,14 +7,62 @@ return [
     // Optional details: overview, role, timeline, features (list), challenge, future_improvements, solution, outcome,
     // gallery (list of image/alt/caption arrays), demo_url, and source_url.
     'projects' => [
-        ['slug' => 'studio-portfolio', 'challenge' => ['Keeping animated project cards easy to navigate.', 'Balancing large previews with readable project details.', 'Adapting the layout to smaller screens.'], 'future_improvements' => ['Add real project screenshots.', 'Publish live demos and source links.', 'Expand each project with a complete case study.'], 'gallery' => [['image' => 'images/sample-project-desktop.svg', 'alt' => 'Close-up of the sample desktop design', 'caption' => 'Desktop design / A closer look']], 'overview' => 'A sample developer portfolio that brings selected work, skills, education, and contact information together in one responsive website.', 'features' => ['Animated project folder with carousel navigation.', 'Responsive layouts for desktop and mobile.', 'Dedicated sections for skills, education, and project inquiries.'], 'title' => 'Studio Portfolio', 'description' => 'Sample project: a responsive developer portfolio with animated projects and a clean mobile layout.', 'tags' => ['HTML', 'CSS', 'JavaScript', 'Laravel', 'Vite'], 'image' => 'images/sample-project.svg', 'demo_url' => null, 'source_url' => null],
-        ['slug' => 'project-02', 'title' => 'Project 02', 'description' => 'Share what you built and your contribution.', 'tags' => [], 'image' => null, 'demo_url' => null, 'source_url' => null],
-        ['slug' => 'project-03', 'title' => 'Project 03', 'description' => 'Highlight the idea and its most useful feature.', 'tags' => [], 'image' => null, 'demo_url' => null, 'source_url' => null],
-        ['slug' => 'project-04', 'title' => 'Project 04', 'description' => 'Tell the story behind another piece of your work.', 'tags' => [], 'image' => null, 'demo_url' => null, 'source_url' => null],
+        [
+            'slug' => 'house-rent-management-system',
+            'title' => 'House-Rent Management System',
+            'description' => 'A team-built house rental website with listings, calendar-based filtering, bookings, and an admin dashboard.',
+            'overview' => 'Developed as a team project during professional training at IT Lab Solutions, this website lets users find houses to rent or list houses for rent. It includes a booking system and an admin dashboard.',
+            'role' => 'Team contributor — calendar-based house filtering and booking system',
+            'features' => ['House rental listings.', 'Calendar-based house filtering.', 'User booking system.', 'Admin dashboard.'],
+            'challenge' => [
+                'Building calendar-based house filtering as my contribution to the rental platform.',
+                'Developing the booking system within a shared team project during my professional training.',
+            ],
+            'future_improvements' => [
+                'Explore clearer calendar feedback to help users understand available booking dates.',
+                'Create a YouTube walkthrough explaining the rental flow and my calendar and booking contributions.',
+            ],
+            'tags' => ['Laravel', 'MySQL', 'Node.js'],
+            'image' => 'images/house rent/house rent 1.jpg',
+            'gallery' => [
+                ['image' => 'images/house rent/house rent 2.jpg', 'alt' => 'House-Rent screenshot 2', 'caption' => 'House-Rent 2'],
+                ['image' => 'images/house rent/house rent 3.jpg', 'alt' => 'House-Rent screenshot 3', 'caption' => 'House-Rent 3'],
+            ],
+            'demo_url' => null,
+            'source_url' => 'https://github.com/kazihalim00/House-Rent',
+        ],
+        [
+            'slug' => 'projectsell',
+            'title' => 'ProjectSell',
+            'description' => 'A project-selling and learning website for software engineering projects.',
+            'overview' => 'ProjectSell is a learning management system that combines selling software engineering projects with teaching.',
+            'features' => ['Software engineering projects for sale.', 'Educational content alongside projects.'],
+            'challenge' => [
+                'Bringing project selling and educational content together in one website.',
+                'Presenting software engineering projects as both products and learning resources.',
+            ],
+            'future_improvements' => [
+                'Add YouTube project walkthroughs that explain how the websites are built.',
+                'Expand project documentation with setup guides and explanations of the code.',
+            ],
+            'tags' => ['Laravel', 'MySQL', 'Node.js'],
+            'image' => 'images/Projectsell/1.jpg',
+            'gallery' => [
+                ['image' => 'images/Projectsell/2.jpg', 'alt' => 'ProjectSell screenshot 2'],
+                ['image' => 'images/Projectsell/3.jpg', 'alt' => 'ProjectSell screenshot 3'],
+                ['image' => 'images/Projectsell/4.jpg', 'alt' => 'ProjectSell screenshot 4'],
+                ['image' => 'images/Projectsell/5.jpg', 'alt' => 'ProjectSell screenshot 5'],
+                ['image' => 'images/Projectsell/7.jpg', 'alt' => 'ProjectSell screenshot 7'],
+            ],
+            'demo_url' => null,
+            'source_url' => 'https://github.com/tasnima831/ProjectSell-website',
+        ],
     ],
     // Set these to your actual numbers to show experience and project cards.
     'coding_since' => 2024, // Calendar-year estimate based on 2 years of coding in 2026.
-    'completed_projects' => 4,
+    'completed_projects' => 2,
+    // Set your live website count manually, or use null to count projects with a demo_url.
+    'live_websites' => 0,
     // Replace these placeholders with your education details; add an entry for each qualification.
     'services' => [
         ['title' => 'Website Development', 'description' => 'A thoughtful website for your business, personal brand, or next idea. Built with clean code and layouts that feel natural on every screen.', 'details' => 'Responsive layouts / Portfolio websites / Business websites'],
@@ -24,12 +72,12 @@ return [
     ],
     'experience' => [
         [
-            'title' => 'Laravel Course',
-            'organization' => 'IT Lab',
+            'title' => 'Laravel Vue Developer Program',
+            'organization' => 'IT Lab Solutions Limited',
             'year' => '2026',
             'timeline_period' => '2022 - 2026',
             'duration' => '5 months',
-            'description' => 'Five months of learning Laravel through a course at IT Lab.',
+            'description' => 'I gained hands-on experience with Laravel, Vue.js, PHP, MySQL, REST APIs, and full-stack web development.',
         ],
     ],
     'education' => [
@@ -38,7 +86,6 @@ return [
             'institution' => 'Metropolitan University',
             'years' => '2022 - 2026',
             'expected_finish' => '2026',
-            'field' => 'Software Engineering',
             'cgpa' => '3.70',
             'description' => '', // Optional: subject, result, or academic highlights.
         ],
@@ -66,7 +113,6 @@ return [
         ['name' => 'PHP', 'icon' => 'php', 'group' => 'backend'],
         ['name' => 'Tailwind CSS', 'icon' => 'tailwindcss', 'group' => 'frontend'],
         ['name' => 'Laravel', 'icon' => 'laravel', 'group' => 'framework'],
-        ['name' => 'Vue.js', 'icon' => 'https://cdn.simpleicons.org/vuedotjs', 'group' => 'framework'],
         ['name' => 'Git', 'icon' => 'https://cdn.simpleicons.org/git', 'group' => 'tool'],
         ['name' => 'GitHub', 'icon' => 'https://cdn.simpleicons.org/github', 'group' => 'tool'],
         ['name' => 'VS Code', 'icon' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg', 'group' => 'tool'],
@@ -76,7 +122,6 @@ return [
         ['name' => 'Vercel', 'icon' => 'https://cdn.simpleicons.org/vercel', 'group' => 'tool'],
     ],
 ];
-
 
 
 

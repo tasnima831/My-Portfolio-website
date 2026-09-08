@@ -19,9 +19,9 @@ document.querySelectorAll('[data-project-gallery]').forEach((gallery) => {
         });
         gallery.querySelector('[data-gallery-count]').textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
     };
-    const start = () => {
+    const start = (allowFocusedPlayback = false) => {
         stop();
-        if (!paused && !gallery.hasAttribute('data-image-expanded') && (!dialog || dialog.open) && !document.hidden && !gallery.matches(':hover') && !gallery.contains(document.activeElement)) {
+        if (!paused && !gallery.hasAttribute('data-image-expanded') && (!dialog || dialog.open) && !document.hidden && (allowFocusedPlayback === true || !gallery.contains(document.activeElement))) {
             timer = setInterval(() => show(current + 1), 5000);
         }
     };
@@ -33,15 +33,13 @@ document.querySelectorAll('[data-project-gallery]').forEach((gallery) => {
     selectors.forEach((button, i) => button.addEventListener('click', () => select(i)));
     gallery.querySelector('[data-gallery-prev]').addEventListener('click', () => select(current - 1));
     gallery.querySelector('[data-gallery-next]').addEventListener('click', () => select(current + 1));
-    pause.addEventListener('click', () => { paused = !paused; updatePause(); start(); });
+    pause.addEventListener('click', () => { paused = !paused; updatePause(); start(!paused); });
     gallery.addEventListener('keydown', (event) => {
         if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
             event.preventDefault();
             select(current + (event.key === 'ArrowLeft' ? -1 : 1));
         }
     });
-    gallery.addEventListener('mouseenter', stop);
-    gallery.addEventListener('mouseleave', start);
     gallery.addEventListener('focusin', stop);
     gallery.addEventListener('focusout', () => setTimeout(start, 0));
     document.addEventListener('visibilitychange', start);
