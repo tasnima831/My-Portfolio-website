@@ -32,6 +32,9 @@ if (projectSelect) {
         item.className = 'project-select__option';
         item.setAttribute('role', 'option');
         item.textContent = option.textContent;
+        // Keep focus on the combobox until click selects the option. Otherwise
+        // focusout hides this non-focusable item before its click can fire.
+        item.addEventListener('pointerdown', event => event.preventDefault());
         item.addEventListener('click', () => choose(index));
         list.append(item);
         return item;
