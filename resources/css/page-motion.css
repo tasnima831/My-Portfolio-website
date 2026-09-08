@@ -1,0 +1,8 @@
+@media (prefers-reduced-motion: no-preference) {
+    .motion-ready .reveal-pending { opacity: 0; }
+    .motion-ready .reveal-pending:focus-within { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}

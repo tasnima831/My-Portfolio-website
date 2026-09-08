@@ -3,7 +3,7 @@
     position: fixed;
     inset: 0;
     z-index: 1000;
-    background: var(--ink);
+    background: rgb(56, 7, 14);
     color: var(--paper);
     transition: transform 850ms cubic-bezier(.76, 0, .24, 1);
 }
@@ -28,4 +28,3 @@ html.is-loading { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
     .preloader { transition: none; }
 }
-
