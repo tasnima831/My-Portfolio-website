@@ -4,7 +4,7 @@
     <link rel="icon" type="image/png" href="{{ asset('images/favicon-white.png') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasnima Akther Tisha</title>
+    @include('partials.seo')
     <script>
         document.documentElement.classList.add('is-loading');
         window.setTimeout(() => document.documentElement.classList.remove('is-loading'), 8000);

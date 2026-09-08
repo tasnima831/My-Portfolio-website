@@ -3,6 +3,11 @@
         <div class="projects-heading"><div><p class="eyebrow">Selected work</p><h2 id="projects-heading">Ideas, brought to life.</h2></div></div>
         @php($projects = collect(config('portfolio.projects', [])))
         @if ($projects->isNotEmpty())
+        <nav class="project-index" aria-label="Project case studies">
+            @foreach ($projects as $project)
+                <a href="{{ route('projects.show', $project['slug']) }}">{{ $project['title'] }} <span aria-hidden="true">&rarr;</span></a>
+            @endforeach
+        </nav>
         <div class="project-archive" data-project-archive>
             <button class="archive-trigger" type="button" aria-expanded="false" aria-controls="project-deck">
                 <span class="archive-folder" aria-hidden="true">

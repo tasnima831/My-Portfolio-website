@@ -1,5 +1,8 @@
 ﻿.content-section.content-section--projects { padding-block: clamp(80px, 10vw, 120px); }
 .projects-inner { width: 100%; max-width: 1240px; margin-inline: auto; }
+.project-index { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-block: 16px; }
+.project-index a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: .9rem; text-decoration: underline; text-underline-offset: 4px; }
+.project-index a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 .projects-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 36px; }
 .projects-heading > p { max-width: 220px; font-size: .95rem; }
 .projects-heading .eyebrow { margin-bottom: 12px; }

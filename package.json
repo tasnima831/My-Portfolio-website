@@ -2,8 +2,12 @@
     "$schema": "https://www.schemastore.org/package.json",
     "private": true,
     "type": "module",
+    "engines": {
+        "node": "22.x"
+    },
     "scripts": {
         "build": "vite build",
+        "build:vercel": "vite build && node scripts/vercel-assets.mjs",
         "dev": "vite"
     },
     "devDependencies": {
